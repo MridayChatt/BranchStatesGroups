@@ -201,3 +201,12 @@ export const stateGroups = [
     link: "https://chat.whatsapp.com/J7uyMi8siwmCOO2eeJIgyy"
   }
 ];
+
+export const clubGroups = [
+  {
+    name: "Lit Club",
+    link: "https://chat.whatsapp.com/Fsnus5rw8tG121gwdZb1Tp",
+    description: "Welcome, noble minds and merry hearts, To the grand stage of expression—where each soul may recite, write, jest, and dream."
+  },
+];
+
