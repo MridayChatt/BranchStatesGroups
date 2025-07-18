@@ -1,7 +1,8 @@
-import { branchGroups, stateGroups } from './data.js';
+import { branchGroups, stateGroups, clubGroups } from './data.js';
 
 const branchSection = document.getElementById("branch-section");
 const stateSection = document.getElementById("state-section");
+const clubSection = document.getElementById("club-section");
 
 function createCopyButton(link) {
   const btn = document.createElement("button");
@@ -54,6 +55,28 @@ function loadStateGroups() {
     stateSection.appendChild(div);
   });
 }
+function loadClubGroups() {
+  if (clubSection.childElementCount > 0) return;
+  clubGroups.forEach(club => {
+    const div = document.createElement("div");
+    div.className = "group";
+
+    const a = document.createElement("a");
+    a.href = club.link;
+    a.className = "group-link";
+    a.innerText = "Join Group";
+
+    const p = document.createElement("p");
+    p.appendChild(document.createTextNode("Group: "));
+    p.appendChild(a);
+    p.appendChild(createCopyButton(club.link));
+
+    div.innerHTML = `<h2>${club.name}</h2><p class="description">${club.description}</p>`;
+    div.appendChild(p);
+
+    clubSection.appendChild(div);
+  });
+}
 
 // Tab switching logic
 const navLinks = document.querySelectorAll(".nav-link");
@@ -74,5 +97,6 @@ navLinks.forEach(link => {
     // Load data if needed
     if (selected === "branch") loadBranchGroups();
     if (selected === "state") loadStateGroups();
+    if (selected === "clubs") loadClubGroups();
   });
 });
