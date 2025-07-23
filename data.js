@@ -204,9 +204,19 @@ export const stateGroups = [
 
 export const clubGroups = [
   {
-    name: "Lit Club",
+    name: "Literary Club",
     link: "https://chat.whatsapp.com/Fsnus5rw8tG121gwdZb1Tp",
     description: "Welcome, noble minds and merry hearts, To the grand stage of expression—where each soul may recite, write, jest, and dream."
   },
+  {
+    name: "Badminton Club",
+    link: "https://chat.whatsapp.com/G6aeYkzWJqKHBxu5OLZnB0",
+    description: "Smash, sprint, and soar—join us on the court for rallies, fun, and fierce competition."
+  },
+  {
+    name: "Table Tennis Club",
+    link: "https://chat.whatsapp.com/HPF9oFxyfULEpouoSdzHrI",
+    description: "Fast reflexes and spin magic—step up to the table and let the paddle do the talking."
+  }
 ];
 
